@@ -1,22 +1,16 @@
 require("dotenv").config();
 
 var keys = require("./keys.js");
+var axios = reqiure("axios");
 
+var inquirer = require("inquirer");
 var spotify = new Spotify(keys.spotify);
 
+var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
 
-var fs = require("fs");
+var omdb = "http://www.omdbapi.com/?apikey=trilogy&";
 
-// This block of code will create a file called "movies.txt".
-// It will then print "Inception, Die Hard" in the file
-fs.writeFile("movies.txt", "Inception, Die Hard", function(err) {
+var choice = process.argv[2];
+var details = process.argv[3];
 
-  // If the code experiences any errors it will log the error to the console.
-  if (err) {
-    return console.log(err);
-  }
-
-  // Otherwise, it will print: "movies.txt was updated!"
-  console.log("movies.txt was updated!");
-
-});
+if
