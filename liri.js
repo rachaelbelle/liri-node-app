@@ -51,7 +51,7 @@ function concert() {
         var data = response.data
         // console.log(JSON.stringify(data));
 
-        //  console.log(response.data)
+        // console.log(response.data)
         //  console.log("console logged" + response.data.Venue)
         console.log("this worked: " + data.venue.name)
     }).catch(function (err) {
