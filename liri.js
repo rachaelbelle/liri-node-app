@@ -36,13 +36,11 @@ function spotifyThis() {
         if (err) {
             return console.log('Error occurred: ' + err);
         }
-            // console.log(JSON.stringify(data.tracks.items));
-            console.log("Artists Name : " + data.tracks.items[0].album.artists[0].name);
-            console.log("Song Name : " + data.tracks.items[0].album.name);
-            console.log("Preview Link : " + data.tracks.items[0].external_urls.spotify);
-            console.log("Album Name : " + data.tracks.items[0].name);
-
-
+        // console.log(JSON.stringify(data.tracks.items));
+        console.log("Artists Name : " + data.tracks.items[0].album.artists[0].name);
+        console.log("Song Name : " + data.tracks.items[0].album.name);
+        console.log("Preview Link : " + data.tracks.items[0].external_urls.spotify);
+        console.log("Album Name : " + data.tracks.items[0].name);
     });
 }
 
@@ -51,6 +49,8 @@ function concert() {
     // console.log(bandsInTown)
     axios.get(bandsInTown).then(function (response) {
         var data = response.data
+        // console.log(JSON.stringify(data));
+
         //  console.log(response.data)
         //  console.log("console logged" + response.data.Venue)
         console.log("this worked: " + data.venue.name)
@@ -86,10 +86,7 @@ function something() {
             return console.log(error);
         }
         console.log(data);
-
         var dataArr = data.split(",");
-
         console.log(dataArr);
-
     });
 };
